@@ -24,6 +24,7 @@ module traffic_light (
 	);
 endmodule
 
+/*
 module Datapath(
 	input clk,
 	input rst,
@@ -43,6 +44,7 @@ module Datapath(
 		.clock_counter(clock_counter)
 	);
 endmodule
+*/
 
 module Traffic_control(
 	input pass,
@@ -139,6 +141,31 @@ module Traffic_control(
 	end
 endmodule
 
+module datapath(
+	input clk,
+	input rst,
+	input pass,
+	output reg [11:0]clock_counter
+);
+	always @(posedge clk or posedge rst == 1)
+	begin
+		if(rst)
+			clock_counter = 0;
+		else
+		begin//??
+			if(clock_counter == 3071)
+				clock_counter = 0;
+			else
+			begin//??
+				if(pass == 1 && clock_counter > 1023)
+					clock_counter = 0;
+				else//??
+					clock_counter = clock_counter + 1;
+			end
+		end
+	end
+endmodule
+/*
 //換
 module compare(
 	input [11:0]clock_counter,
@@ -178,3 +205,4 @@ module counter(
 		end
 	end
 endmodule
+*/
