@@ -24,39 +24,17 @@ module traffic_light (
 	);
 endmodule
 
-/*
-module Datapath(
-	input clk,
-	input rst,
-	input pass,
-	output [11:0]clock_counter
-);
-	wire recount;
-	compare compare(
-		.clock_counter(clock_counter),
-		.recount(recount)
-	);
-	counter counter(
-		.clk(clk),
-		.pass(pass),
-		.rst(rst),
-		.recount(recount),
-		.clock_counter(clock_counter)
-	);
-endmodule
-*/
-
 module Traffic_control(
 	input pass,
 	input rst,
 	input clk,
 	input clock_counter,
-	output reg R,
-	output reg G,
-	output reg Y
+	output reg R = 0,
+	output reg G = 0,
+	output reg Y = 0
 );
-	reg [1:0] current_state;
-	reg [1:0] next_state;
+	reg [1:0] current_state = 0;
+	reg [1:0] next_state = 0;
 	parameter[1:0] red_light = 0, green_light = 1, yellow_light = 2, none_light = 3;
 	//state register
 	always @(posedge clk or posedge rst == 1)
@@ -74,34 +52,34 @@ module Traffic_control(
 	//next state logic
 	always @(current_state)                        
 	begin
-		if(clock_counter == 1023)
-			next_state = none_light;
+		if(clock_counter < 1023)
+			next_state = green_light;
 		else
 		begin
-			if(clock_counter == 1151)
-				next_state = green_light;
+			if(clock_counter >= 1023 && clock_counter < 1151)
+				next_state = none_light;
 			else
 			begin
-				if(clock_counter == 1279)
-					next_state = none_light;
+				if(clock_counter >= 1151 && clock_counter < 1279)
+					next_state = green_light;
 				else
 				begin
-					if(clock_counter == 1407)
-						next_state = green_light;
+					if(clock_counter >= 1279 && clock_counter < 1407)
+						next_state = none_light;
 					else
 					begin
-						if(clock_counter == 1535)
-							next_state = yellow_light;
+						if(clock_counter >= 1407 && clock_counter < 1535)
+							next_state = green_light;
 						else
 						begin
-							if(clock_counter == 2047)
-								next_state = red_light;
+							if(clock_counter >= 1535 && clock_counter < 2047)
+								next_state = yellow_light;
 							else
 							begin
-								if(clock_counter == 3071)
-									next_state = green_light;
+								if(clock_counter >= 2047 && clock_counter < 3071)
+									next_state = red_light;
 								else
-									next_state = current_state;
+									next_state = green_light;
 							end
 						end
 					end
@@ -145,7 +123,7 @@ module datapath(
 	input clk,
 	input rst,
 	input pass,
-	output reg [11:0]clock_counter
+	output reg [11:0]clock_counter = 0
 );
 	always @(posedge clk or posedge rst == 1)
 	begin
@@ -165,6 +143,28 @@ module datapath(
 		end
 	end
 endmodule
+/*
+module Datapath(
+	input clk,
+	input rst,
+	input pass,
+	output [11:0]clock_counter
+);
+	wire recount;
+	compare compare(
+		.clock_counter(clock_counter),
+		.recount(recount)
+	);
+	counter counter(
+		.clk(clk),
+		.pass(pass),
+		.rst(rst),
+		.recount(recount),
+		.clock_counter(clock_counter)
+	);
+endmodule
+*/
+
 /*
 //換
 module compare(
