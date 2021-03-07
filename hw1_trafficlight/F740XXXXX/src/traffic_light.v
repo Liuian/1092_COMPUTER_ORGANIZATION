@@ -119,7 +119,7 @@ module Traffic_control(
 	end
 endmodule
 
-module datapath(
+module Datapath(
 	input clk,
 	input rst,
 	input pass,
