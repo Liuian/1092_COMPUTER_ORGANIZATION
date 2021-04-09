@@ -10,9 +10,16 @@ average:
     sw $ra, 0x0($sp)    # Save $ra register into stack
 
     #--------------------------------------#
-	add $ra, $a0, $a1
-	add $ra, $ra, $a2
-	#add $v0, $ra, $zero
+	addi $ra, $zero, 0		#ra = 0
+	add $a0, $a0, $a1
+	add $a0, $a0, $a2		#a0 =  a0 + a1 + a2
+	loop:
+		addi $a0, $a0, -3	#a0 = a0 - 3
+		addi $ra, $ra, 1	#ra = ra + 1
+		slti $a1, $a0, 3	#if(a0 < 3) a1 = 1; else a1 = 0;
+		beq $a1, 0, loop	#if(a1 == 0) jump to loop
+	addi $v0, $zero, 0
+	add $v0, $ra, $zero
     #--------------------------------------#
 
     lw $ra, 0x0($sp)    # Load $ra register from stack
