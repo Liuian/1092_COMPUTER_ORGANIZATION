@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src
+vSRAM
+Z1 !s110 1620827570
+!i10b 1
+!s100 098NVJ5G7cQKQ54o@ikSC1
+IDmHCFmUJjIlfJ45QEo4;^3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1613988062
+8SRAM.v
+FSRAM.v
+L0 3
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1620827570.000000
+Z6 !s107 SRAM.v|CPU.v|//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top.v|
+Z7 !s90 -reportprogress|300|-work|work|-stats=none|//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top.v|
+!i113 1
+Z8 o-work work
+Z9 tCvgOpt 0
+n@s@r@a@m
+vtop
+R1
+!i10b 1
+!s100 3nA]>>K_ENC>4H3_H3T@Y0
+I_iSn:o<KXUnUjQ=b7T2]O1
+R2
+R0
+R3
+8//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top.v
+F//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+vtop_tb
+!s110 1620827568
+!i10b 1
+!s100 G>0gzeVZEW0Al_bIBMz=R3
+IJ<]BIJKLEf5JK_Y:2RRn^0
+R2
+R0
+R3
+8//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top_tb.v
+F//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top_tb.v
+L0 14
+R4
+r1
+!s85 0
+31
+!s108 1620827568.000000
+!s107 //vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|//vmware-host/Shared Folders/peggy On My Mac/Documents/109-2(2-2)/computer_organization/hw3_single_cycle_riscv_cpu/F740XXXXX/src/top_tb.v|
+!i113 1
+R8
+R9
