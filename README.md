@@ -7,6 +7,6 @@ associativity 使用 1.direct-mapped 2.four-way set associative 3.fully associat
 Replace algorithm 使用 1.represents FIFO 2.represents LRU 3.represents your policy 三種方法。  
   
   以下是我在這次作業寫的回饋 :   
-<img width="555" alt="image" src="https://user-images.githubusercontent.com/70461575/133794994-ff65cd51-d742-462d-a220-58b9897e6c36.png">
+<img width="555" alt="image" src="https://user-images.githubusercontent.com/70461575/133795622-4dddb2a0-17b0-430e-9974-185fdba24914.png">  
 <img width="555" alt="image" src="https://user-images.githubusercontent.com/70461575/133795136-4c9eaf6d-0b64-48a7-be3b-713b4558bf3e.png">
 <img width="555" alt="image" src="https://user-images.githubusercontent.com/70461575/133795222-8be6418e-7f24-4740-9b2f-6c853cfe54fc.png">
